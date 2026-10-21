@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+repositories {
+    google()
+    mavenCentral()
+}
+android {
+    namespace 'com.sano.dpl'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.sano.dpl"
+        minSdk 21
+        targetSdk 33
+        versionCode 541
+        versionName "5.4.1"
+    }
+    signingConfigs {
+        debug {
+            storeFile file('dpl.keystore')
+            storePassword 'android'
+            keyAlias 'dpl'
+            keyPassword 'android'
+        }
+    }
+    buildTypes { release { minifyEnabled false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    kotlinOptions { jvmTarget = '1.8' }
+}
+dependencies {
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+}

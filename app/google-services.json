@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240737190558",
+    "project_id": "diplomagame-ee7f8",
+    "storage_bucket": "diplomagame-ee7f8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240737190558:android:907c96058fb751ac9ab18f",
+        "android_client_info": {
+          "package_name": "com.sano.dpl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYWVpdsXU5nrMpA4VeZK-i2mfkfoNI8Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,31 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "servers": { ".read": "auth != null", ".write": "auth != null" },
+    "index": { ".read": "auth != null", ".write": "auth != null" },
+    "users": { ".read": "auth != null", ".write": "auth != null" },
+    "ids": { ".read": "auth != null", ".write": "auth != null" },
+    "nicks": { ".read": "auth != null", ".write": "auth != null" },
+    "orders": { ".read": "auth != null", ".write": "auth != null" },
+    "ochat": { ".read": "auth != null", ".write": "auth != null" },
+    "adminOnline": { ".read": "auth != null", ".write": "auth != null" },
+    "bans": {
+      ".read": "auth != null",
+      ".write": "auth != null && ((auth.token.email_verified == true && (auth.token.email == 'albifahriefendi@gmail.com' || auth.token.email == 'yapik12345ce@gmail.com')) || root.child('mods').child(auth.uid).exists())"
+    },
+    "mods": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email_verified == true && (auth.token.email == 'albifahriefendi@gmail.com' || auth.token.email == 'yapik12345ce@gmail.com')"
+    },
+    "appconfig": {
+      ".read": true,
+      ".write": "auth != null && ((auth.token.email_verified == true && (auth.token.email == 'albifahriefendi@gmail.com' || auth.token.email == 'yapik12345ce@gmail.com')) || root.child('mods').child(auth.uid).exists())"
+    },
+    "reports": { ".read": "auth != null", ".write": "auth != null" },
+    "maintenance": {
+      ".read": true,
+      ".write": "auth != null && ((auth.token.email_verified == true && (auth.token.email == 'albifahriefendi@gmail.com' || auth.token.email == 'yapik12345ce@gmail.com')) || root.child('mods').child(auth.uid).exists())"
+    }
+  }
+}
